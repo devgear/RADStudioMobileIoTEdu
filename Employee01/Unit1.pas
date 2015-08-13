@@ -9,7 +9,8 @@ uses
   System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.EngExt,
   Fmx.Bind.DBEngExt, Data.Bind.Components, FMX.Objects, FMX.ListBox,
   FMX.Layouts, FMX.StdCtrls, Data.Bind.ObjectScope, FMX.ListView,
-  FMX.Controls.Presentation, FMX.TabControl, System.Actions, FMX.ActnList;
+  FMX.Controls.Presentation, FMX.TabControl, System.Actions, FMX.ActnList,
+  FMX.Edit, FMX.WebBrowser, FMX.MediaLibrary.Actions, FMX.StdActns;
 
 type
   TForm1 = class(TForm)
@@ -38,13 +39,54 @@ type
     LinkPropertyToFieldText2: TLinkPropertyToField;
     ActionList1: TActionList;
     ChangeTabAction1: TChangeTabAction;
-    StyleBook1: TStyleBook;
+    TabItem3: TTabItem;
+    ToolBar3: TToolBar;
+    ListBox2: TListBox;
+    Label5: TLabel;
+    Button2: TButton;
+    Button3: TButton;
+    ListBoxGroupHeader2: TListBoxGroupHeader;
+    ListBoxItem4: TListBoxItem;
+    ListBoxItem5: TListBoxItem;
+    ListBoxItem6: TListBoxItem;
+    ListBoxGroupHeader3: TListBoxGroupHeader;
+    ListBoxItem7: TListBoxItem;
+    ListBoxItem8: TListBoxItem;
+    Image2: TImage;
+    Button4: TButton;
+    Button5: TButton;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    ListBoxGroupHeader4: TListBoxGroupHeader;
+    ListBoxItem9: TListBoxItem;
+    ListBoxItem10: TListBoxItem;
+    Edit6: TEdit;
+    Label6: TLabel;
+    Label7: TLabel;
+    TabItem4: TTabItem;
+    ToolBar4: TToolBar;
+    Button6: TButton;
+    Label8: TLabel;
+    WebBrowser1: TWebBrowser;
+    Button7: TButton;
+    Button8: TButton;
+    TakePhotoFromLibraryAction1: TTakePhotoFromLibraryAction;
+    TakePhotoFromCameraAction1: TTakePhotoFromCameraAction;
     procedure FormCreate(Sender: TObject);
     procedure ListView1ItemClick(const Sender: TObject;
       const AItem: TListViewItem);
     procedure Button1Click(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
+    procedure Label6Click(Sender: TObject);
+    procedure Label7Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
+    procedure Button7Click(Sender: TObject);
+    procedure Button8Click(Sender: TObject);
+    procedure TakePhotoFromLibraryAction1DidFinishTaking(Image: TBitmap);
+    procedure TakePhotoFromCameraAction1DidFinishTaking(Image: TBitmap);
   private
     { Private declarations }
   public
@@ -57,10 +99,32 @@ var
 implementation
 
 {$R *.fmx}
+{$R *.iPhone4in.fmx IOS}
+
+uses
+  FMX.Platform, FMX.PhoneDialer;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
   ChangeTabAction1.Tab := TabItem1;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
+
+procedure TForm1.Button6Click(Sender: TObject);
+begin
+  ChangeTabAction1.Tab := TabItem2;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
+
+procedure TForm1.Button7Click(Sender: TObject);
+begin
+  ChangeTabAction1.Tab := TabItem3;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
+
+procedure TForm1.Button8Click(Sender: TObject);
+begin
+  ChangeTabAction1.Tab := TabItem3;
   ChangeTabAction1.ExecuteTarget(nil);
 end;
 
@@ -86,11 +150,46 @@ begin
 {$ENDIF}
 end;
 
+procedure TForm1.Label6Click(Sender: TObject);
+var
+  PhoneDlrSvc: IFMXPhoneDialerService;
+begin
+  if TPlatformServices.Current.
+    SupportsPlatformService(IFMXPhoneDialerService, IInterface(PhoneDlrSvc)) then
+  begin
+    PhoneDlrSvc.Call(Label6.Text);
+  end;
+end;
+
+// 웹사이트 클릭
+procedure TForm1.Label7Click(Sender: TObject);
+begin
+Log.d('log message(%d, %d)', [1, 3]);
+
+  WebBrowser1.URL := Label7.Text;
+  WebBrowser1.Navigate;
+
+  Label8.Text := WebBrowser1.URL;
+
+  ChangeTabAction1.Tab := TabItem4;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
+
 procedure TForm1.ListView1ItemClick(const Sender: TObject;
   const AItem: TListViewItem);
 begin
   ChangeTabAction1.Tab := TabItem2;
   ChangeTabAction1.ExecuteTarget(nil);
+end;
+
+procedure TForm1.TakePhotoFromCameraAction1DidFinishTaking(Image: TBitmap);
+begin
+  Image2.Bitmap.Assign(Image);
+end;
+
+procedure TForm1.TakePhotoFromLibraryAction1DidFinishTaking(Image: TBitmap);
+begin
+  Image2.Bitmap.Assign(Image);
 end;
 
 end.

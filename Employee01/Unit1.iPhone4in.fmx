@@ -1,0 +1,200 @@
+inherited Form1_iPhone4in: TForm1_iPhone4in
+  ClientHeight = 548
+  ClientWidth = 320
+  DesignerMasterStyle = 3
+  inherited TabControl1: TTabControl
+    Size.Width = 320.000000000000000000
+    Size.Height = 548.000000000000000000
+    inherited TabItem1: TTabItem
+      Size.Width = 80.000000000000000000
+      inherited ToolBar1: TToolBar
+        Size.Width = 320.000000000000000000
+        Size.Height = 44.000000000000000000
+        inherited Label1: TLabel
+          Size.Width = 320.000000000000000000
+          Size.Height = 44.000000000000000000
+        end
+        inherited Button7: TButton
+          Position.X = 276.000000000000000000
+          Size.Width = 44.000000000000000000
+          Size.Height = 44.000000000000000000
+        end
+      end
+      inherited ListView1: TListView
+        Size.Width = 320.000000000000000000
+        Size.Height = 455.000000000000000000
+      end
+    end
+    inherited TabItem2: TTabItem
+      Size.Width = 80.000000000000000000
+      inherited ToolBar2: TToolBar
+        Size.Width = 320.000000000000000000
+        Size.Height = 44.000000000000000000
+        inherited Label2: TLabel
+          Size.Width = 320.000000000000000000
+          Size.Height = 44.000000000000000000
+        end
+        inherited Button1: TButton
+          Size.Height = 44.000000000000000000
+        end
+        inherited Button8: TButton
+          Position.X = 276.000000000000000000
+          Size.Width = 44.000000000000000000
+          Size.Height = 44.000000000000000000
+        end
+      end
+      inherited ListBox1: TListBox
+        Size.Width = 320.000000000000000000
+        Size.Height = 455.000000000000000000
+        Viewport.Width = 320.000000000000000000
+        Viewport.Height = 455.000000000000000000
+        inherited ListBoxGroupHeader1: TListBoxGroupHeader
+          Size.Width = 320.000000000000000000
+          Size.Height = 22.000000000000000000
+        end
+        inherited ListBoxItem1: TListBoxItem
+          Position.Y = 22.000000000000000000
+          Size.Width = 320.000000000000000000
+        end
+        inherited ListBoxItem2: TListBoxItem
+          Position.Y = 185.000000000000000000
+          Size.Width = 320.000000000000000000
+          inherited Label3: TLabel
+            Size.Width = 255.000000000000000000
+          end
+        end
+        inherited ListBoxItem3: TListBoxItem
+          Position.Y = 225.000000000000000000
+          Size.Width = 320.000000000000000000
+          inherited Label4: TLabel
+            Size.Width = 255.000000000000000000
+          end
+        end
+        inherited ListBoxGroupHeader4: TListBoxGroupHeader
+          Position.Y = 265.000000000000000000
+          Size.Width = 320.000000000000000000
+        end
+        inherited ListBoxItem9: TListBoxItem
+          Position.Y = 295.000000000000000000
+          Size.Width = 320.000000000000000000
+          inherited Label6: TLabel
+            Position.X = 24.000000000000000000
+            Size.Width = 296.000000000000000000
+          end
+        end
+        inherited ListBoxItem10: TListBoxItem
+          Position.Y = 339.000000000000000000
+          Size.Width = 320.000000000000000000
+          inherited Edit6: TEdit
+            Position.X = -258.000000000000000000
+            Position.Y = 7.000000000000000000
+            Size.Width = 278.000000000000000000
+            Size.Height = 30.000000000000000000
+          end
+          inherited Label7: TLabel
+            Position.X = 24.000000000000000000
+            Size.Width = 296.000000000000000000
+          end
+        end
+      end
+    end
+    inherited TabItem3: TTabItem
+      Size.Width = 80.000000000000000000
+      inherited ToolBar3: TToolBar
+        Size.Width = 320.000000000000000000
+        Size.Height = 44.000000000000000000
+        inherited Label5: TLabel
+          Size.Width = 320.000000000000000000
+          Size.Height = 44.000000000000000000
+        end
+        inherited Button2: TButton
+          Size.Width = 44.000000000000000000
+          Size.Height = 44.000000000000000000
+        end
+        inherited Button3: TButton
+          Position.X = 272.000000000000000000
+          Size.Height = 44.000000000000000000
+        end
+      end
+      inherited ListBox2: TListBox
+        Size.Width = 320.000000000000000000
+        Size.Height = 455.000000000000000000
+        Viewport.Width = 320.000000000000000000
+        Viewport.Height = 455.000000000000000000
+        inherited ListBoxGroupHeader2: TListBoxGroupHeader
+          Size.Width = 320.000000000000000000
+          Size.Height = 22.000000000000000000
+        end
+        inherited ListBoxItem4: TListBoxItem
+          Position.Y = 22.000000000000000000
+          Size.Width = 320.000000000000000000
+          inherited Button4: TButton
+            Position.X = 168.000000000000000000
+          end
+          inherited Button5: TButton
+            Position.X = 240.000000000000000000
+          end
+        end
+        inherited ListBoxItem5: TListBoxItem
+          Position.Y = 137.000000000000000000
+          inherited Edit1: TEdit
+            Position.X = 38.000000000000000000
+            Position.Y = 7.000000000000000000
+            Size.Width = 360.000000000000000000
+            Size.Height = 30.000000000000000000
+          end
+        end
+        inherited ListBoxItem6: TListBoxItem
+          Position.Y = 181.000000000000000000
+          inherited Edit2: TEdit
+            Position.X = 38.000000000000000000
+            Position.Y = 7.000000000000000000
+            Size.Width = 360.000000000000000000
+            Size.Height = 30.000000000000000000
+          end
+        end
+        inherited ListBoxGroupHeader3: TListBoxGroupHeader
+          Position.Y = 225.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 22.000000000000000000
+        end
+        inherited ListBoxItem7: TListBoxItem
+          Position.Y = 247.000000000000000000
+          inherited Edit3: TEdit
+            Position.X = 38.000000000000000000
+            Position.Y = 7.000000000000000000
+            Size.Width = 360.000000000000000000
+            Size.Height = 30.000000000000000000
+          end
+        end
+        inherited ListBoxItem8: TListBoxItem
+          Position.Y = 291.000000000000000000
+          inherited Edit4: TEdit
+            Position.X = 38.000000000000000000
+            Position.Y = 7.000000000000000000
+            Size.Width = 360.000000000000000000
+            Size.Height = 30.000000000000000000
+          end
+        end
+      end
+    end
+    inherited TabItem4: TTabItem
+      Size.Width = 80.000000000000000000
+      inherited ToolBar4: TToolBar
+        Size.Width = 320.000000000000000000
+        Size.Height = 44.000000000000000000
+        inherited Button6: TButton [0]
+          Size.Height = 44.000000000000000000
+        end
+        inherited Label8: TLabel [1]
+          Size.Width = 272.000000000000000000
+          Size.Height = 44.000000000000000000
+        end
+      end
+      inherited WebBrowser1: TWebBrowser
+        Size.Width = 320.000000000000000000
+        Size.Height = 455.000000000000000000
+      end
+    end
+  end
+end

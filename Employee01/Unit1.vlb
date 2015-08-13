@@ -10,9 +10,6 @@ Coordinates=604,453,59,33
 [Label1]
 Coordinates=89,453,46,51
 
-[TabControl1]
-Coordinates=179,530,74,33
-
 [ToolBar1]
 Coordinates=95,530,58,33
 
@@ -54,4 +51,7 @@ Coordinates=365,265,46,51
 
 [ListBoxItem1]
 Coordinates=161,453,79,33
+
+[TabControl1]
+Coordinates=179,530,74,33
 
