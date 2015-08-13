@@ -9,7 +9,7 @@ uses
   System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.EngExt,
   Fmx.Bind.DBEngExt, Data.Bind.Components, FMX.Objects, FMX.ListBox,
   FMX.Layouts, FMX.StdCtrls, Data.Bind.ObjectScope, FMX.ListView,
-  FMX.Controls.Presentation, FMX.TabControl;
+  FMX.Controls.Presentation, FMX.TabControl, System.Actions, FMX.ActnList;
 
 type
   TForm1 = class(TForm)
@@ -36,6 +36,15 @@ type
     LinkPropertyToFieldBitmap: TLinkPropertyToField;
     LinkPropertyToFieldText: TLinkPropertyToField;
     LinkPropertyToFieldText2: TLinkPropertyToField;
+    ActionList1: TActionList;
+    ChangeTabAction1: TChangeTabAction;
+    StyleBook1: TStyleBook;
+    procedure FormCreate(Sender: TObject);
+    procedure ListView1ItemClick(const Sender: TObject;
+      const AItem: TListViewItem);
+    procedure Button1Click(Sender: TObject);
+    procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -48,5 +57,40 @@ var
 implementation
 
 {$R *.fmx}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  ChangeTabAction1.Tab := TabItem1;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  TabControl1.TabIndex := 0;
+  TabControl1.TabPosition := TTabPosition.None;
+end;
+
+procedure TForm1.FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
+  Shift: TShiftState);
+begin
+{$IFDEF ANDROID}
+  if Key = vkHardwareBack then
+  begin
+    if TabControl1.TabIndex = 1 then
+    begin
+      ChangeTabAction1.Tab := TabItem1;
+      ChangeTabAction1.ExecuteTarget(nil);
+      Key := 0;
+    end;
+  end;
+{$ENDIF}
+end;
+
+procedure TForm1.ListView1ItemClick(const Sender: TObject;
+  const AItem: TListViewItem);
+begin
+  ChangeTabAction1.Tab := TabItem2;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
 
 end.
