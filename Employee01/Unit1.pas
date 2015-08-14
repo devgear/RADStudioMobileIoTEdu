@@ -10,7 +10,8 @@ uses
   Fmx.Bind.DBEngExt, Data.Bind.Components, FMX.Objects, FMX.ListBox,
   FMX.Layouts, FMX.StdCtrls, Data.Bind.ObjectScope, FMX.ListView,
   FMX.Controls.Presentation, FMX.TabControl, System.Actions, FMX.ActnList,
-  FMX.Edit, FMX.WebBrowser, FMX.MediaLibrary.Actions, FMX.StdActns;
+  FMX.Edit, FMX.WebBrowser, FMX.MediaLibrary.Actions, FMX.StdActns,
+  Data.Bind.DBScope;
 
 type
   TForm1 = class(TForm)
@@ -20,9 +21,6 @@ type
     ToolBar1: TToolBar;
     Label1: TLabel;
     ListView1: TListView;
-    PrototypeBindSource1: TPrototypeBindSource;
-    BindingsList1: TBindingsList;
-    LinkListControlToField1: TLinkListControlToField;
     ToolBar2: TToolBar;
     Label2: TLabel;
     Button1: TButton;
@@ -34,9 +32,6 @@ type
     Image1: TImage;
     Label3: TLabel;
     Label4: TLabel;
-    LinkPropertyToFieldBitmap: TLinkPropertyToField;
-    LinkPropertyToFieldText: TLinkPropertyToField;
-    LinkPropertyToFieldText2: TLinkPropertyToField;
     ActionList1: TActionList;
     ChangeTabAction1: TChangeTabAction;
     TabItem3: TTabItem;
@@ -74,6 +69,14 @@ type
     Button8: TButton;
     TakePhotoFromLibraryAction1: TTakePhotoFromLibraryAction;
     TakePhotoFromCameraAction1: TTakePhotoFromCameraAction;
+    BindSourceDB1: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    LinkListControlToField1: TLinkListControlToField;
+    LinkPropertyToFieldBitmap: TLinkPropertyToField;
+    LinkPropertyToFieldText: TLinkPropertyToField;
+    LinkPropertyToFieldText2: TLinkPropertyToField;
+    LinkPropertyToFieldText3: TLinkPropertyToField;
+    LinkPropertyToFieldText4: TLinkPropertyToField;
     procedure FormCreate(Sender: TObject);
     procedure ListView1ItemClick(const Sender: TObject;
       const AItem: TListViewItem);
@@ -102,7 +105,7 @@ implementation
 {$R *.iPhone4in.fmx IOS}
 
 uses
-  FMX.Platform, FMX.PhoneDialer;
+  FMX.Platform, FMX.PhoneDialer, Unit2;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
