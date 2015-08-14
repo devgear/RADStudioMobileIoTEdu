@@ -81,6 +81,7 @@ type
     LinkControlToField2: TLinkControlToField;
     LinkControlToField3: TLinkControlToField;
     LinkControlToField4: TLinkControlToField;
+    OpenDialog1: TOpenDialog;
     procedure FormCreate(Sender: TObject);
     procedure ListView1ItemClick(const Sender: TObject;
       const AItem: TListViewItem);
@@ -96,6 +97,7 @@ type
     procedure TakePhotoFromCameraAction1DidFinishTaking(Image: TBitmap);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -111,7 +113,7 @@ implementation
 {$R *.iPhone4in.fmx IOS}
 
 uses
-  FMX.Platform, FMX.PhoneDialer, Unit2;
+  FMX.Platform, FMX.PhoneDialer, Unit2, Data.DB;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
@@ -128,7 +130,27 @@ begin
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
+var
+  ImageBitmap, Thumbnail: TBitmap;
+  ImgStream, ThumbStream: TMemoryStream;
 begin
+  ImgStream := TMemoryStream.Create;
+  ThumbStream := TMemoryStream.Create;
+  try
+    ImageBitmap := Image2.Bitmap;
+    Thumbnail := ImageBitmap.CreateThumbnail(100, 100);
+
+    ImageBitmap.SaveToStream(ImgStream);
+    Thumbnail.SaveToStream(ThumbStream);
+
+    (dmData.FDQuery1.FieldByName('THUMB') as TBlobField).LoadFromStream(ThumbStream);
+    (dmData.FDQuery1.FieldByName('IMAGE') as TBlobField).LoadFromStream(ImgStream);
+  finally
+    ImgStream.Free;
+    ThumbStream.Free;
+  end;
+
+
   dmData.FDQuery1.Post;
 
   ChangeTabAction1.Tab := TabItem1;
@@ -177,6 +199,14 @@ begin
     end;
   end;
 {$ENDIF}
+end;
+
+procedure TForm1.Image2Click(Sender: TObject);
+begin
+  if OpenDialog1.Execute then
+  begin
+    Image2.Bitmap.LoadFromFile(OpenDialog1.FileName);
+  end;
 end;
 
 procedure TForm1.Label6Click(Sender: TObject);

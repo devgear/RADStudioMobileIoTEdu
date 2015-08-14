@@ -192,4 +192,12 @@ inherited Form1_iPhone4in: TForm1_iPhone4in
       end
     end
   end
+  inherited OpenDialog1: TOpenDialog [1]
+  end
+  inherited ActionList1: TActionList [2]
+  end
+  inherited BindSourceDB1: TBindSourceDB [3]
+  end
+  inherited BindingsList1: TBindingsList [4]
+  end
 end

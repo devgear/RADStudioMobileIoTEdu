@@ -17,14 +17,14 @@ object Form1: TForm1
     Size.Height = 509.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
-    TabIndex = 0
+    TabIndex = 2
     TabOrder = 0
     TabPosition = PlatformDefault
     object TabItem1: TTabItem
       CustomIcon = <
         item
         end>
-      IsSelected = True
+      IsSelected = False
       Size.Width = 101.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
@@ -24657,7 +24657,7 @@ object Form1: TForm1
       CustomIcon = <
         item
         end>
-      IsSelected = False
+      IsSelected = True
       Size.Width = 101.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
@@ -49153,6 +49153,7 @@ object Form1: TForm1
             Size.Width = 81.000000000000000000
             Size.Height = 89.000000000000000000
             Size.PlatformDefault = False
+            OnClick = Image2Click
           end
           object Button4: TButton
             Action = TakePhotoFromCameraAction1
@@ -49427,5 +49428,9 @@ object Form1: TForm1
       Control = Edit4
       Track = False
     end
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 312
+    Top = 144
   end
 end
