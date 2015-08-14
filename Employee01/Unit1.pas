@@ -57,7 +57,6 @@ type
     ListBoxGroupHeader4: TListBoxGroupHeader;
     ListBoxItem9: TListBoxItem;
     ListBoxItem10: TListBoxItem;
-    Edit6: TEdit;
     Label6: TLabel;
     Label7: TLabel;
     TabItem4: TTabItem;
@@ -77,6 +76,11 @@ type
     LinkPropertyToFieldText2: TLinkPropertyToField;
     LinkPropertyToFieldText3: TLinkPropertyToField;
     LinkPropertyToFieldText4: TLinkPropertyToField;
+    LinkPropertyToFieldBitmap2: TLinkPropertyToField;
+    LinkControlToField1: TLinkControlToField;
+    LinkControlToField2: TLinkControlToField;
+    LinkControlToField3: TLinkControlToField;
+    LinkControlToField4: TLinkControlToField;
     procedure FormCreate(Sender: TObject);
     procedure ListView1ItemClick(const Sender: TObject;
       const AItem: TListViewItem);
@@ -90,6 +94,8 @@ type
     procedure Button8Click(Sender: TObject);
     procedure TakePhotoFromLibraryAction1DidFinishTaking(Image: TBitmap);
     procedure TakePhotoFromCameraAction1DidFinishTaking(Image: TBitmap);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -113,6 +119,22 @@ begin
   ChangeTabAction1.ExecuteTarget(nil);
 end;
 
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  dmData.FDQuery1.Cancel;
+
+  ChangeTabAction1.Tab := TabItem1;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+  dmData.FDQuery1.Post;
+
+  ChangeTabAction1.Tab := TabItem1;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
+
 procedure TForm1.Button6Click(Sender: TObject);
 begin
   ChangeTabAction1.Tab := TabItem2;
@@ -121,12 +143,16 @@ end;
 
 procedure TForm1.Button7Click(Sender: TObject);
 begin
+  dmData.FDQuery1.Insert;
+
   ChangeTabAction1.Tab := TabItem3;
   ChangeTabAction1.ExecuteTarget(nil);
 end;
 
 procedure TForm1.Button8Click(Sender: TObject);
 begin
+  dmData.FDQuery1.Edit;
+
   ChangeTabAction1.Tab := TabItem3;
   ChangeTabAction1.ExecuteTarget(nil);
 end;

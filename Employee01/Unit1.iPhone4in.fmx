@@ -86,12 +86,6 @@ inherited Form1_iPhone4in: TForm1_iPhone4in
         inherited ListBoxItem10: TListBoxItem
           Position.Y = 331.000000000000000000
           Size.Width = 320.000000000000000000
-          inherited Edit6: TEdit
-            Position.X = -258.000000000000000000
-            Position.Y = 7.000000000000000000
-            Size.Width = 278.000000000000000000
-            Size.Height = 30.000000000000000000
-          end
           inherited Label7: TLabel
             Position.X = 24.000000000000000000
             Size.Width = 296.000000000000000000
@@ -140,16 +134,18 @@ inherited Form1_iPhone4in: TForm1_iPhone4in
           Position.Y = 137.000000000000000000
           inherited Edit1: TEdit
             Position.X = 38.000000000000000000
+            Position.Y = 7.000000000000000000
             Size.Width = 360.000000000000000000
-            Size.Height = 44.000000000000000000
+            Size.Height = 30.000000000000000000
           end
         end
         inherited ListBoxItem6: TListBoxItem
           Position.Y = 181.000000000000000000
           inherited Edit2: TEdit
             Position.X = 38.000000000000000000
+            Position.Y = 7.000000000000000000
             Size.Width = 360.000000000000000000
-            Size.Height = 44.000000000000000000
+            Size.Height = 30.000000000000000000
           end
         end
         inherited ListBoxGroupHeader3: TListBoxGroupHeader
@@ -161,16 +157,18 @@ inherited Form1_iPhone4in: TForm1_iPhone4in
           Position.Y = 247.000000000000000000
           inherited Edit3: TEdit
             Position.X = 38.000000000000000000
+            Position.Y = 7.000000000000000000
             Size.Width = 360.000000000000000000
-            Size.Height = 44.000000000000000000
+            Size.Height = 30.000000000000000000
           end
         end
         inherited ListBoxItem8: TListBoxItem
           Position.Y = 291.000000000000000000
           inherited Edit4: TEdit
             Position.X = 38.000000000000000000
+            Position.Y = 7.000000000000000000
             Size.Width = 360.000000000000000000
-            Size.Height = 44.000000000000000000
+            Size.Height = 30.000000000000000000
           end
         end
       end

@@ -23,6 +23,7 @@ type
     FDQuery1IMAGE: TBlobField;
     FDQuery1THUMB: TBlobField;
     FDQuery1SITE: TStringField;
+    procedure FDConnection1BeforeConnect(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,5 +38,16 @@ implementation
 {%CLASSGROUP 'FMX.Controls.TControl'}
 
 {$R *.dfm}
+
+uses
+  System.IOUtils;
+
+procedure TdmData.FDConnection1BeforeConnect(Sender: TObject);
+begin
+{$IFNDEF MSWINDOWS}
+  FDConnection1.Params.Values['Database'] :=
+    TPath.Combine(TPath.GetDocumentsPath, 'EMPLOYEE.db');
+{$ENDIF}
+end;
 
 end.

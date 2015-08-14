@@ -9,6 +9,7 @@ object dmData: TdmData
       'DriverID=SQLite')
     Connected = True
     LoginPrompt = False
+    BeforeConnect = FDConnection1BeforeConnect
     Left = 32
     Top = 16
   end
@@ -17,12 +18,13 @@ object dmData: TdmData
     Connection = FDConnection1
     SQL.Strings = (
       'SELECT * FROM EMPLOYEES')
-    Left = 32
+    Left = 56
     Top = 88
     object FDQuery1IDX: TFDAutoIncField
       FieldName = 'IDX'
       Origin = 'IDX'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object FDQuery1NAME: TStringField
       FieldName = 'NAME'
