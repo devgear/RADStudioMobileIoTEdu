@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A9306238-B38B-4110-AB09-2C0418A19C3A}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Server\ProjectDSServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Client\MobileDSDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ProjectDSServer">
+        <MSBuild Projects="Server\ProjectDSServer.dproj"/>
+    </Target>
+    <Target Name="ProjectDSServer:Clean">
+        <MSBuild Projects="Server\ProjectDSServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProjectDSServer:Make">
+        <MSBuild Projects="Server\ProjectDSServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MobileDSDemo">
+        <MSBuild Projects="Client\MobileDSDemo.dproj"/>
+    </Target>
+    <Target Name="MobileDSDemo:Clean">
+        <MSBuild Projects="Client\MobileDSDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MobileDSDemo:Make">
+        <MSBuild Projects="Client\MobileDSDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ProjectDSServer;MobileDSDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ProjectDSServer:Clean;MobileDSDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ProjectDSServer:Make;MobileDSDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
