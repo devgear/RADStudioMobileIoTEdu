@@ -1,0 +1,193 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 344
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 344.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 1
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 172.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = #49324#50896#47785#47197
+      object ToolBar1: TToolBar
+        Size.Width = 344.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label1: TLabel
+          Align = Contents
+          Size.Width = 344.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = #49324#50896#51221#48372' '#50545
+        end
+      end
+      object ListView1: TListView
+        ItemAppearanceClassName = 'TImageListItemBottomDetailAppearance'
+        ItemEditAppearanceClassName = 'TImageListItemBottomDetailShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        ItemIndex = 0
+        Align = Client
+        Size.Width = 344.000000000000000000
+        Size.Height = 383.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        ItemAppearance.ItemHeight = 60
+        ItemAppearanceObjects.ItemObjects.Image.Width = 56.000000000000000000
+        ItemAppearanceObjects.ItemObjects.Image.Height = 56.000000000000000000
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 172.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = #49324#50896#49345#49464
+      object ToolBar2: TToolBar
+        Size.Width = 344.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label2: TLabel
+          Align = Contents
+          Size.Width = 344.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Label2'
+        end
+      end
+      object ListBox1: TListBox
+        Align = Client
+        Size.Width = 344.000000000000000000
+        Size.Height = 383.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 344.000000000000000000
+        Viewport.Height = 383.000000000000000000
+        object ListBoxItem1: TListBoxItem
+          TabOrder = 0
+          Text = 'ListBoxItem1'
+        end
+        object ListBoxGroupHeader1: TListBoxGroupHeader
+          Position.Y = 44.000000000000000000
+          Size.Width = 344.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = #44592#48376#51221#48372
+        end
+        object ListBoxItem2: TListBoxItem
+          Position.Y = 74.000000000000000000
+          TabOrder = 2
+          Text = 'ListBoxItem2'
+        end
+        object ListBoxItem3: TListBoxItem
+          Position.Y = 118.000000000000000000
+          TabOrder = 3
+          Text = 'ListBoxItem3'
+        end
+        object ListBoxGroupHeader2: TListBoxGroupHeader
+          Position.Y = 162.000000000000000000
+          Size.Width = 344.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = #52628#44032#51221#48372
+        end
+        object ListBoxItem4: TListBoxItem
+          Position.Y = 192.000000000000000000
+          TabOrder = 5
+          Text = 'ListBoxItem4'
+        end
+        object ListBoxItem5: TListBoxItem
+          Position.Y = 236.000000000000000000
+          TabOrder = 6
+          Text = 'ListBoxItem5'
+        end
+      end
+    end
+  end
+  object PrototypeBindSource1: TPrototypeBindSource
+    AutoActivate = True
+    AutoPost = False
+    FieldDefs = <
+      item
+        Name = 'ContactName1'
+        Generator = 'ContactNames'
+        ReadOnly = False
+      end
+      item
+        Name = 'ContactTitle1'
+        Generator = 'ContactTitles'
+        ReadOnly = False
+      end
+      item
+        Name = 'ContactBitmap1'
+        FieldType = ftBitmap
+        Generator = 'ContactBitmaps'
+        ReadOnly = False
+      end
+      item
+        Name = 'ContactBitmapL1'
+        FieldType = ftBitmap
+        Generator = 'ContactBitmapsL'
+        ReadOnly = False
+      end>
+    ScopeMappings = <>
+    Left = 304
+    Top = 56
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = PrototypeBindSource1
+      FieldName = 'ContactName1'
+      Control = ListView1
+      FillExpressions = <
+        item
+          SourceMemberName = 'ContactTitle1'
+          ControlMemberName = 'Detail'
+        end
+        item
+          SourceMemberName = 'ContactBitmap1'
+          ControlMemberName = 'Bitmap'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+end
