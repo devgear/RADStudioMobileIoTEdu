@@ -10,7 +10,7 @@ uses
   Fmx.Bind.DBEngExt, FMX.ListBox, FMX.Layouts, Data.Bind.Components,
   Data.Bind.ObjectScope, FMX.ListView, FMX.TabControl, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.Objects, System.Actions, FMX.ActnList,
-  FMX.WebBrowser;
+  FMX.WebBrowser, FMX.MediaLibrary.Actions, FMX.StdActns;
 
 type
   TForm1 = class(TForm)
@@ -50,11 +50,39 @@ type
     Label7: TLabel;
     Button2: TButton;
     WebBrowser1: TWebBrowser;
+    TabItem4: TTabItem;
+    ToolBar4: TToolBar;
+    Label8: TLabel;
+    Button3: TButton;
+    Button4: TButton;
+    ListBox2: TListBox;
+    ListBoxItem6: TListBoxItem;
+    ListBoxGroupHeader3: TListBoxGroupHeader;
+    ListBoxItem7: TListBoxItem;
+    ListBoxItem8: TListBoxItem;
+    ListBoxGroupHeader4: TListBoxGroupHeader;
+    ListBoxItem9: TListBoxItem;
+    ListBoxItem10: TListBoxItem;
+    Rectangle1: TRectangle;
+    Image2: TImage;
+    Button5: TButton;
+    Button6: TButton;
+    Button7: TButton;
+    Button8: TButton;
+    TakePhotoFromLibraryAction1: TTakePhotoFromLibraryAction;
+    TakePhotoFromCameraAction1: TTakePhotoFromCameraAction;
     procedure ListView1ItemClick(const Sender: TObject;
       const AItem: TListViewItem);
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure ListBoxItem4Click(Sender: TObject);
+    procedure ListBoxItem5Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button7Click(Sender: TObject);
+    procedure Button8Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure TakePhotoFromLibraryAction1DidFinishTaking(Image: TBitmap);
+    procedure TakePhotoFromCameraAction1DidFinishTaking(Image: TBitmap);
   private
     { Private declarations }
   public
@@ -74,6 +102,30 @@ uses
 procedure TForm1.Button1Click(Sender: TObject);
 begin
   ChangeTabAction1.Tab := TabItem1;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  ChangeTabAction1.Tab := TabItem2;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+  ChangeTabAction1.Tab := TabItem1;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
+
+procedure TForm1.Button7Click(Sender: TObject);
+begin
+  ChangeTabAction1.Tab := TabItem4;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
+
+procedure TForm1.Button8Click(Sender: TObject);
+begin
+  ChangeTabAction1.Tab := TabItem4;
   ChangeTabAction1.ExecuteTarget(nil);
 end;
 
@@ -97,11 +149,35 @@ begin
   end;
 end;
 
+procedure TForm1.ListBoxItem5Click(Sender: TObject);
+var
+  URL: string;
+begin
+  URL := Label6.Text;
+
+  Label7.Text := URL;
+  WebBrowser1.URL := URL;
+  WebBrowser1.Navigate;
+
+  ChangeTabAction1.Tab := TabItem3;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
+
 procedure TForm1.ListView1ItemClick(const Sender: TObject;
   const AItem: TListViewItem);
 begin
   ChangeTabAction1.Tab := TabItem2;
   ChangeTabAction1.ExecuteTarget(nil);
+end;
+
+procedure TForm1.TakePhotoFromCameraAction1DidFinishTaking(Image: TBitmap);
+begin
+  Image2.Bitmap.Assign(Image);
+end;
+
+procedure TForm1.TakePhotoFromLibraryAction1DidFinishTaking(Image: TBitmap);
+begin
+  Image2.Bitmap.Assign(Image);
 end;
 
 end.

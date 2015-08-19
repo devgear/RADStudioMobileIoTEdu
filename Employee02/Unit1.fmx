@@ -24,7 +24,7 @@ object Form1: TForm1
         item
         end>
       IsSelected = False
-      Size.Width = 125.000000000000000000
+      Size.Width = 94.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -41,6 +41,17 @@ object Form1: TForm1
           Size.PlatformDefault = False
           TextSettings.HorzAlign = Center
           Text = #49324#50896#51221#48372' '#50545
+        end
+        object Button7: TButton
+          Align = Right
+          Position.X = 327.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'addtoolbutton'
+          TabOrder = 0
+          Text = 'Button7'
+          OnClick = Button7Click
         end
       end
       object ListView1: TListView
@@ -65,7 +76,7 @@ object Form1: TForm1
         item
         end>
       IsSelected = False
-      Size.Width = 125.000000000000000000
+      Size.Width = 94.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -92,6 +103,17 @@ object Form1: TForm1
           TabOrder = 0
           Text = 'Button1'
           OnClick = Button1Click
+        end
+        object Button8: TButton
+          Align = Right
+          Position.X = 327.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'composetoolbutton'
+          TabOrder = 1
+          Text = 'Button8'
+          OnClick = Button8Click
         end
       end
       object ListBox1: TListBox
@@ -400,6 +422,7 @@ object Form1: TForm1
           Size.PlatformDefault = False
           TabOrder = 6
           Text = #50937#49324#51060#53944
+          OnClick = ListBoxItem5Click
           object Label6: TLabel
             Align = Right
             Anchors = [akLeft, akTop, akRight, akBottom]
@@ -407,7 +430,7 @@ object Form1: TForm1
             Size.Width = 279.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
-            Text = 'http://blog.hjf.pe.kr/'
+            Text = 'http://www.naver.com'
           end
         end
       end
@@ -417,7 +440,7 @@ object Form1: TForm1
         item
         end>
       IsSelected = True
-      Size.Width = 125.000000000000000000
+      Size.Width = 94.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -442,6 +465,7 @@ object Form1: TForm1
           StyleLookup = 'backtoolbutton'
           TabOrder = 1
           Text = 'Button2'
+          OnClick = Button2Click
         end
       end
       object WebBrowser1: TWebBrowser
@@ -449,6 +473,149 @@ object Form1: TForm1
         Size.Width = 375.000000000000000000
         Size.Height = 383.000000000000000000
         Size.PlatformDefault = False
+      end
+    end
+    object TabItem4: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 93.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = #49324#50896#51221#48372' '#49688#51221
+      object ToolBar4: TToolBar
+        Size.Width = 375.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label8: TLabel
+          Align = Contents
+          Size.Width = 375.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = #49324#50896#51221#48372' '#49688#51221
+        end
+        object Button3: TButton
+          Align = Left
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'backtoolbutton'
+          TabOrder = 1
+          Text = 'Button3'
+          OnClick = Button3Click
+        end
+        object Button4: TButton
+          Align = Right
+          Position.X = 327.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'donetoolbutton'
+          TabOrder = 2
+          Text = #51200#51109
+        end
+      end
+      object ListBox2: TListBox
+        Align = Client
+        Size.Width = 375.000000000000000000
+        Size.Height = 383.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 375.000000000000000000
+        Viewport.Height = 383.000000000000000000
+        object ListBoxItem6: TListBoxItem
+          Size.Width = 375.000000000000000000
+          Size.Height = 113.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = #49324#51652
+          object Rectangle1: TRectangle
+            Position.X = 64.000000000000000000
+            Position.Y = 11.000000000000000000
+            Size.Width = 89.000000000000000000
+            Size.Height = 89.000000000000000000
+            Size.PlatformDefault = False
+            object Image2: TImage
+              MultiResBitmap = <
+                item
+                end>
+              Align = Client
+              Size.Width = 89.000000000000000000
+              Size.Height = 89.000000000000000000
+              Size.PlatformDefault = False
+            end
+          end
+          object Button5: TButton
+            Action = TakePhotoFromCameraAction1
+            Enabled = True
+            ImageIndex = -1
+            Position.X = 160.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Text = #52852#47700#46972
+            Visible = True
+          end
+          object Button6: TButton
+            Action = TakePhotoFromLibraryAction1
+            Enabled = True
+            ImageIndex = -1
+            Position.X = 160.000000000000000000
+            Position.Y = 56.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = #49324#51652#50536#48276
+            Visible = True
+          end
+        end
+        object ListBoxGroupHeader3: TListBoxGroupHeader
+          Position.Y = 113.000000000000000000
+          Size.Width = 375.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = #44592#48376#51221#48372
+        end
+        object ListBoxItem7: TListBoxItem
+          Position.Y = 143.000000000000000000
+          TabOrder = 2
+          Text = #51060#47492
+        end
+        object ListBoxItem8: TListBoxItem
+          Position.Y = 187.000000000000000000
+          TabOrder = 3
+          Text = #51649#44553
+        end
+        object ListBoxGroupHeader4: TListBoxGroupHeader
+          Position.Y = 231.000000000000000000
+          Size.Width = 375.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = #52628#44032#51221#48372
+        end
+        object ListBoxItem9: TListBoxItem
+          Position.Y = 261.000000000000000000
+          TabOrder = 5
+          Text = #50672#46973#52376
+        end
+        object ListBoxItem10: TListBoxItem
+          Position.Y = 305.000000000000000000
+          TabOrder = 6
+          Text = #50937#49324#51060#53944
+        end
       end
     end
   end
@@ -479,8 +646,8 @@ object Form1: TForm1
         ReadOnly = False
       end>
     ScopeMappings = <>
-    Left = 304
-    Top = 56
+    Left = 272
+    Top = 112
   end
   object BindingsList1: TBindingsList
     Methods = <>
@@ -539,6 +706,14 @@ object Form1: TForm1
     object ChangeTabAction1: TChangeTabAction
       Category = 'Tab'
       Tab = TabItem1
+    end
+    object TakePhotoFromLibraryAction1: TTakePhotoFromLibraryAction
+      Category = 'Media Library'
+      OnDidFinishTaking = TakePhotoFromLibraryAction1DidFinishTaking
+    end
+    object TakePhotoFromCameraAction1: TTakePhotoFromCameraAction
+      Category = 'Media Library'
+      OnDidFinishTaking = TakePhotoFromCameraAction1DidFinishTaking
     end
   end
 end
