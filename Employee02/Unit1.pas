@@ -9,7 +9,8 @@ uses
   System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.EngExt,
   Fmx.Bind.DBEngExt, FMX.ListBox, FMX.Layouts, Data.Bind.Components,
   Data.Bind.ObjectScope, FMX.ListView, FMX.TabControl, FMX.StdCtrls,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation, FMX.Objects, System.Actions, FMX.ActnList,
+  FMX.WebBrowser;
 
 type
   TForm1 = class(TForm)
@@ -32,6 +33,28 @@ type
     ListBoxGroupHeader2: TListBoxGroupHeader;
     ListBoxItem4: TListBoxItem;
     ListBoxItem5: TListBoxItem;
+    Image1: TImage;
+    Label3: TLabel;
+    Label4: TLabel;
+    LinkPropertyToFieldText: TLinkPropertyToField;
+    LinkPropertyToFieldText2: TLinkPropertyToField;
+    LinkPropertyToFieldText3: TLinkPropertyToField;
+    LinkPropertyToFieldBitmap: TLinkPropertyToField;
+    ActionList1: TActionList;
+    ChangeTabAction1: TChangeTabAction;
+    Button1: TButton;
+    Label5: TLabel;
+    Label6: TLabel;
+    TabItem3: TTabItem;
+    ToolBar3: TToolBar;
+    Label7: TLabel;
+    Button2: TButton;
+    WebBrowser1: TWebBrowser;
+    procedure ListView1ItemClick(const Sender: TObject;
+      const AItem: TListViewItem);
+    procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure ListBoxItem4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,5 +67,41 @@ var
 implementation
 
 {$R *.fmx}
+
+uses
+  FMX.PhoneDialer, FMX.Platform;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  ChangeTabAction1.Tab := TabItem1;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  TabControl1.TabPosition := TTabPosition.None;
+  TabControl1.TabIndex := 0;
+end;
+
+procedure TForm1.ListBoxItem4Click(Sender: TObject);
+var
+  PhoneNo: string;
+  PhoneDlrSvc: IFMXPhoneDialerService;
+begin
+  if TPlatformServices.Current.
+    SupportsPlatformService(IFMXPhoneDialerService, IInterface(PhoneDlrSvc)) then
+  begin
+    PhoneNo := Label5.Text;
+    PhoneNo := PhoneNo.Replace('-', '');
+    PhoneDlrSvc.Call(PhoneNo);
+  end;
+end;
+
+procedure TForm1.ListView1ItemClick(const Sender: TObject;
+  const AItem: TListViewItem);
+begin
+  ChangeTabAction1.Tab := TabItem2;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
 
 end.
