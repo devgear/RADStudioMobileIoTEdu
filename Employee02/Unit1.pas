@@ -10,7 +10,8 @@ uses
   Fmx.Bind.DBEngExt, FMX.ListBox, FMX.Layouts, Data.Bind.Components,
   Data.Bind.ObjectScope, FMX.ListView, FMX.TabControl, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.Objects, System.Actions, FMX.ActnList,
-  FMX.WebBrowser, FMX.MediaLibrary.Actions, FMX.StdActns, Data.Bind.DBScope;
+  FMX.WebBrowser, FMX.MediaLibrary.Actions, FMX.StdActns, Data.Bind.DBScope,
+  FMX.Edit;
 
 type
   TForm1 = class(TForm)
@@ -72,6 +73,16 @@ type
     LinkPropertyToFieldText2: TLinkPropertyToField;
     LinkPropertyToFieldText3: TLinkPropertyToField;
     LinkPropertyToFieldText4: TLinkPropertyToField;
+    LinkPropertyToFieldBitmap2: TLinkPropertyToField;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    LinkControlToField1: TLinkControlToField;
+    LinkControlToField2: TLinkControlToField;
+    LinkControlToField3: TLinkControlToField;
+    LinkControlToField4: TLinkControlToField;
+    OpenDialog1: TOpenDialog;
     procedure ListView1ItemClick(const Sender: TObject;
       const AItem: TListViewItem);
     procedure Button1Click(Sender: TObject);
@@ -84,6 +95,7 @@ type
     procedure Button3Click(Sender: TObject);
     procedure TakePhotoFromLibraryAction1DidFinishTaking(Image: TBitmap);
     procedure TakePhotoFromCameraAction1DidFinishTaking(Image: TBitmap);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -98,7 +110,7 @@ implementation
 {$R *.fmx}
 
 uses
-  FMX.PhoneDialer, FMX.Platform, Unit2;
+  FMX.PhoneDialer, FMX.Platform, Unit2, Data.DB;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
@@ -114,18 +126,51 @@ end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 begin
+  dmData.FDQuery1.Cancel;
+
   ChangeTabAction1.Tab := TabItem1;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+var
+  ImageBitmap, Thumbnail: TBitmap;
+  ImgStream, ThumbStream: TMemoryStream;
+begin
+  ImgStream := TMemoryStream.Create;
+  ThumbStream := TMemoryStream.Create;
+  try
+    ImageBitmap := Image2.Bitmap;
+    ImageBitmap.SaveToStream(ImgStream);
+
+    Thumbnail := ImageBitmap.CreateThumbnail(100, 100);
+    Thumbnail.SaveToStream(ThumbStream);
+
+    (dmData.FDQuery1.FieldByName('IMAGE') as TBlobField).LoadFromStream(ImgStream);
+    (dmData.FDQuery1.FieldByName('THUMB') as TBlobField).LoadFromStream(ThumbStream);
+  finally
+    ImgStream.Free;
+    ThumbStream.Free;
+  end;
+
+  dmData.FDQuery1.Post;
+
+  ChangeTabAction1.Tab := TabItem2;
   ChangeTabAction1.ExecuteTarget(nil);
 end;
 
 procedure TForm1.Button7Click(Sender: TObject);
 begin
+  dmData.FDQuery1.Append;
+
   ChangeTabAction1.Tab := TabItem4;
   ChangeTabAction1.ExecuteTarget(nil);
 end;
 
 procedure TForm1.Button8Click(Sender: TObject);
 begin
+  dmData.FDQuery1.Edit;
+
   ChangeTabAction1.Tab := TabItem4;
   ChangeTabAction1.ExecuteTarget(nil);
 end;
