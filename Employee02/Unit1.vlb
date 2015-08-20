@@ -1,63 +1,159 @@
 ﻿[ToolBar1]
-Coordinates=293,590,58,33
+Coordinates=886,770,67,36
 
 [TabItem1]
-Coordinates=497,590,59,33
+Coordinates=698,770,69,36
 
 [Label1]
-Coordinates=93,506,46,51
+Coordinates=180,624,53,58
 
 [PrototypeBindSource1]
-Coordinates=190,240,125,177
+Coordinates=147,296,143,192
 
 [TabControl1]
-Coordinates=386,590,74,33
+Coordinates=744,708,85,36
 
 [TabItem2]
-Coordinates=592,590,59,33
+Coordinates=1065,708,69,36
 
 [ListView1]
-Coordinates=20,230,89,195
+Coordinates=370,10,107,234
 
 [BindingsList1]
-Coordinates=308,87,82,33
+Coordinates=308,87,91,36
 
 [ListBoxItem2]
-Coordinates=10,590,79,33
+Coordinates=293,708,89,36
 
 [ListBoxGroupHeader2]
-Coordinates=125,590,123,33
+Coordinates=408,708,142,36
 
 [ListBoxItem3]
-Coordinates=610,506,79,33
+Coordinates=583,770,89,36
 
 [ListBoxItem5]
-Coordinates=495,506,79,33
+Coordinates=1160,708,89,36
 
 [ListBoxGroupHeader1]
-Coordinates=725,506,123,33
+Coordinates=125,708,142,36
 
 [ToolBar2]
-Coordinates=402,506,58,33
+Coordinates=793,770,67,36
 
 [ListBox1]
-Coordinates=499,10,116,177
+Coordinates=668,10,139,212
 
 [Label2]
-Coordinates=370,220,46,51
+Coordinates=397,304,53,58
 
 [ListBoxItem4]
-Coordinates=287,506,79,33
+Coordinates=919,624,89,36
 
 [ListBoxItem1]
-Coordinates=172,506,79,33
+Coordinates=950,708,89,36
 
 [Image1]
-Coordinates=380,440,49,51
+Coordinates=10,363,57,58
 
 [Label4]
-Coordinates=390,360,46,51
+Coordinates=397,540,53,58
 
 [Label3]
-Coordinates=390,290,46,51
+Coordinates=397,422,53,58
+
+[ListBoxItem10]
+Coordinates=461,770,96,36
+
+[ListBoxItem7]
+Coordinates=346,770,89,36
+
+[Button7]
+Coordinates=585,624,59,58
+
+[ActionList1]
+Coordinates=676,342,78,36
+
+[TakePhotoFromLibraryAction1]
+Coordinates=552,397,189,36
+
+[ListBoxItem9]
+Coordinates=231,770,89,36
+
+[Rectangle1]
+Coordinates=125,770,80,36
+
+[Button6]
+Coordinates=95,624,59,58
+
+[ListBox2]
+Coordinates=503,10,139,212
+
+[ListBoxItem6]
+Coordinates=10,770,89,36
+
+[Button2]
+Coordinates=755,624,59,58
+
+[Label6]
+Coordinates=338,624,53,58
+
+[WebBrowser1]
+Coordinates=1275,708,95,36
+
+[Image2]
+Coordinates=417,624,57,58
+
+[Label8]
+Coordinates=259,624,53,58
+
+[TabItem4]
+Coordinates=855,708,69,36
+
+[ListBoxGroupHeader3]
+Coordinates=576,708,142,36
+
+[Button8]
+Coordinates=670,624,59,58
+
+[TakePhotoFromCameraAction1]
+Coordinates=905,111,195,36
+
+[ChangeTabAction1]
+Coordinates=779,111,124,36
+
+[ListBoxItem8]
+Coordinates=10,708,89,36
+
+[ListBoxGroupHeader4]
+Coordinates=1315,624,142,36
+
+[Button5]
+Coordinates=500,624,59,58
+
+[Label5]
+Coordinates=840,624,53,58
+
+[ToolBar3]
+Coordinates=1222,624,67,36
+
+[Button3]
+Coordinates=1060,10,59,58
+
+[TabItem3]
+Coordinates=1127,624,69,36
+
+[Button1]
+Coordinates=10,624,59,58
+
+[Label7]
+Coordinates=833,10,53,58
+
+[Button4]
+Coordinates=1145,10,59,58
+
+[ToolBar4]
+Coordinates=1034,624,67,36
+
+[dmData.FDQuery1]
+Coordinates=912,10,122,58
 

@@ -97,7 +97,7 @@ implementation
 {$R *.fmx}
 
 uses
-  FMX.PhoneDialer, FMX.Platform;
+  FMX.PhoneDialer, FMX.Platform, Unit2;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin

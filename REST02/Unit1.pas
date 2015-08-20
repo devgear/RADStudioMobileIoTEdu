@@ -56,6 +56,8 @@ function OpenURL(const URL: string): Boolean;
 var
   Intent: JIntent;
 begin
+  ShowMessage(URL);
+
   Intent := TJIntent.JavaClass.init(TJIntent.JavaClass.ACTION_VIEW,
     TJnet_Uri.JavaClass.parse(StringToJString(TURLEncoding.URL.Encode(URL))));
   try
