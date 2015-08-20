@@ -9,6 +9,7 @@ object dmData: TdmData
       'DriverID=SQLite')
     Connected = True
     LoginPrompt = False
+    BeforeConnect = FDConnection1BeforeConnect
     Left = 48
     Top = 16
   end

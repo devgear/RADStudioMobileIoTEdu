@@ -16,6 +16,7 @@ type
     FDQuery1: TFDQuery;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
+    procedure FDConnection1BeforeConnect(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,5 +31,18 @@ implementation
 {%CLASSGROUP 'FMX.Controls.TControl'}
 
 {$R *.dfm}
+
+uses
+  System.IOUtils;
+
+procedure TdmData.FDConnection1BeforeConnect(Sender: TObject);
+var
+  Path: string;
+begin
+{$IFNDEF MSWINDOWS}
+  Path := TPath.Combine(TPath.GetDocumentsPath, 'EMPLOYEE.db');
+  FDConnection1.Params.Values['Database'] := Path;
+{$ENDIF}
+end;
 
 end.

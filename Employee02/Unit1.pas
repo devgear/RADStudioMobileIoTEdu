@@ -10,7 +10,7 @@ uses
   Fmx.Bind.DBEngExt, FMX.ListBox, FMX.Layouts, Data.Bind.Components,
   Data.Bind.ObjectScope, FMX.ListView, FMX.TabControl, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.Objects, System.Actions, FMX.ActnList,
-  FMX.WebBrowser, FMX.MediaLibrary.Actions, FMX.StdActns;
+  FMX.WebBrowser, FMX.MediaLibrary.Actions, FMX.StdActns, Data.Bind.DBScope;
 
 type
   TForm1 = class(TForm)
@@ -20,9 +20,6 @@ type
     TabItem1: TTabItem;
     TabItem2: TTabItem;
     ListView1: TListView;
-    PrototypeBindSource1: TPrototypeBindSource;
-    BindingsList1: TBindingsList;
-    LinkListControlToField1: TLinkListControlToField;
     ToolBar2: TToolBar;
     Label2: TLabel;
     ListBox1: TListBox;
@@ -36,10 +33,6 @@ type
     Image1: TImage;
     Label3: TLabel;
     Label4: TLabel;
-    LinkPropertyToFieldText: TLinkPropertyToField;
-    LinkPropertyToFieldText2: TLinkPropertyToField;
-    LinkPropertyToFieldText3: TLinkPropertyToField;
-    LinkPropertyToFieldBitmap: TLinkPropertyToField;
     ActionList1: TActionList;
     ChangeTabAction1: TChangeTabAction;
     Button1: TButton;
@@ -71,6 +64,14 @@ type
     Button8: TButton;
     TakePhotoFromLibraryAction1: TTakePhotoFromLibraryAction;
     TakePhotoFromCameraAction1: TTakePhotoFromCameraAction;
+    BindSourceDB1: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    LinkListControlToField1: TLinkListControlToField;
+    LinkPropertyToFieldBitmap: TLinkPropertyToField;
+    LinkPropertyToFieldText: TLinkPropertyToField;
+    LinkPropertyToFieldText2: TLinkPropertyToField;
+    LinkPropertyToFieldText3: TLinkPropertyToField;
+    LinkPropertyToFieldText4: TLinkPropertyToField;
     procedure ListView1ItemClick(const Sender: TObject;
       const AItem: TListViewItem);
     procedure Button1Click(Sender: TObject);
