@@ -85,6 +85,14 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="..\resource\EMPLOYEE.db" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>EmployeeDG.app\StartUp\Documents\</RemoteDir>
+            <RemoteName>EMPLOYEE.db</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="iOSDevice32\Debug\EmployeeDG.entitlements" Condition="'$(Config)'=='Debug'">
             <RemoteDir>EmployeeDG.app\../\</RemoteDir>
             <RemoteName>EmployeeDG.entitlements</RemoteName>
@@ -177,14 +185,6 @@
             <RemoteDir>EmployeeDG.app\</RemoteDir>
             <RemoteName>Default-Landscape.png</RemoteName>
             <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="..\resource\EMPLOYEE.db" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>EmployeeDG.app\StartUp\Documents\</RemoteDir>
-            <RemoteName>EMPLOYEE.db</RemoteName>
-            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -319,6 +319,14 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="..\resource\EMPLOYEE.db" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>EmployeeDG\assets\internal\</RemoteDir>
+            <RemoteName>EMPLOYEE.db</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>EmployeeDG\res\drawable-small\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
@@ -408,14 +416,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="..\resource\EMPLOYEE.db" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>EmployeeDG\assets\internal\</RemoteDir>
-            <RemoteName>EMPLOYEE.db</RemoteName>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_640x480.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>EmployeeDG\res\drawable-large\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
@@ -466,6 +466,14 @@
         </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='Win32'">
+        <DeployFile Include="..\resource\EMPLOYEE.db" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>EmployeeDG\</RemoteDir>
+            <RemoteName>EMPLOYEE.db</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="Win32\Debug\EmployeeDG.exe" Condition="'$(Config)'=='Debug'">
             <RemoteDir>EmployeeDG\</RemoteDir>
             <RemoteName>EmployeeDG.exe</RemoteName>
@@ -474,14 +482,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
             <Required>True</Required>
-        </DeployFile>
-        <DeployFile Include="..\resource\EMPLOYEE.db" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>EmployeeDG\</RemoteDir>
-            <RemoteName>EMPLOYEE.db</RemoteName>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
         </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='iOSDevice64'">
@@ -523,18 +523,18 @@
         </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='iOSSimulator'">
-        <DeployFile Include="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib">
-            <RemoteDir>EmployeeDG.app\</RemoteDir>
-            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="..\resource\EMPLOYEE.db" Condition="'$(Config)'=='Debug'">
             <RemoteDir>EmployeeDG.app\</RemoteDir>
             <RemoteName>EMPLOYEE.db</RemoteName>
             <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib">
+            <RemoteDir>EmployeeDG.app\</RemoteDir>
+            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
+            <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>

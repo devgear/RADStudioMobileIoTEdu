@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{66D88552-63EA-45EC-B484-3EAC6E8C9185}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Server\ProjectDSDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Client\DSClientDemoDG.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ProjectDSDemo">
+        <MSBuild Projects="Server\ProjectDSDemo.dproj"/>
+    </Target>
+    <Target Name="ProjectDSDemo:Clean">
+        <MSBuild Projects="Server\ProjectDSDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProjectDSDemo:Make">
+        <MSBuild Projects="Server\ProjectDSDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DSClientDemoDG">
+        <MSBuild Projects="Client\DSClientDemoDG.dproj"/>
+    </Target>
+    <Target Name="DSClientDemoDG:Clean">
+        <MSBuild Projects="Client\DSClientDemoDG.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DSClientDemoDG:Make">
+        <MSBuild Projects="Client\DSClientDemoDG.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ProjectDSDemo;DSClientDemoDG"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ProjectDSDemo:Clean;DSClientDemoDG:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ProjectDSDemo:Make;DSClientDemoDG:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
