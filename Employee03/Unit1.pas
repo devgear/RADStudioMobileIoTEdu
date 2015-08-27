@@ -51,6 +51,10 @@ type
     Button2: TButton;
     WebBrowser1: TWebBrowser;
     TabItem4: TTabItem;
+    ToolBar4: TToolBar;
+    Label4: TLabel;
+    Button3: TButton;
+    Button4: TButton;
     procedure ListView1ItemClick(const Sender: TObject;
       const AItem: TListViewItem);
     procedure Button1Click(Sender: TObject);
