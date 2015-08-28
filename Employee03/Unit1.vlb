@@ -1,79 +1,179 @@
 ﻿[TabControl1]
-Coordinates=622,530,74,33
+Coordinates=10,811,74,33
 
 [ListView1]
-Coordinates=10,150,89,195
+Coordinates=20,50,89,195
 Visible=True
 
 [ToolBar1]
-Coordinates=453,530,58,33
+Coordinates=1142,752,58,33
 
 [TabItem2]
-Coordinates=537,530,59,33
+Coordinates=1200,675,59,33
 
 [Label1]
-Coordinates=164,453,46,51
-
-[PrototypeBindSource1]
-Coordinates=180,160,125,177
+Coordinates=1102,10,46,51
 
 [TabItem1]
-Coordinates=722,530,59,33
-
-[BindingsList1]
-Coordinates=401,65,82,33
+Coordinates=966,675,59,33
 
 [ToolBar2]
-Coordinates=369,530,58,33
+Coordinates=1285,675,58,33
 
 [ListBoxItem4]
-Coordinates=264,530,79,33
+Coordinates=179,752,79,33
 
 [ListBoxGroupHeader1]
-Coordinates=115,530,123,33
+Coordinates=1226,752,123,33
 
 [lblName]
-Coordinates=350,220,54,51
+Coordinates=440,230,54,51
 
 [lblTitle]
-Coordinates=350,340,47,51
+Coordinates=360,150,47,51
 
 [lblSite]
-Coordinates=10,453,45,51
+Coordinates=350,240,45,51
 
 [Label2]
-Coordinates=350,280,46,51
+Coordinates=530,220,46,51
 
 [ListBoxItem2]
-Coordinates=10,530,79,33
+Coordinates=688,752,79,33
 
 [ListBoxItem1]
-Coordinates=674,453,79,33
+Coordinates=368,752,79,33
 
 [Button1]
-Coordinates=236,453,53,51
+Coordinates=1023,10,53,51
 
 [ListBoxItem5]
-Coordinates=569,453,79,33
+Coordinates=558,811,79,33
 
 [ListBoxItem3]
-Coordinates=464,453,79,33
+Coordinates=861,675,79,33
 
 [lblPhone]
-Coordinates=81,453,57,51
+Coordinates=327,598,57,51
 
 [Image1]
-Coordinates=350,160,49,51
+Coordinates=420,370,49,51
 
 [ListBoxGroupHeader2]
-Coordinates=315,453,123,33
+Coordinates=888,752,123,33
 
 [ListBox1]
-Coordinates=459,10,116,177
+Coordinates=426,10,116,177
 
 [ChangeTabAction1]
 Coordinates=0,0,108,33
 
 [ActionList1]
 Coordinates=127,1,70,33
+
+[]
+Coordinates=401,65,82,33
+
+[TabItem4]
+Coordinates=10,752,59,33
+
+[ToolBar3]
+Coordinates=284,752,58,33
+
+[TabItem3]
+Coordinates=110,811,59,33
+
+[Label3]
+Coordinates=951,10,46,51
+
+[WebBrowser1]
+Coordinates=344,811,83,33
+
+[Button2]
+Coordinates=322,675,53,51
+
+[TakePhotoFromCameraAction1]
+Coordinates=801,1,168,33
+
+[ListBoxItem8]
+Coordinates=663,811,79,33
+
+[Button5]
+Coordinates=872,10,53,51
+
+[Rectangle1]
+Coordinates=793,752,69,33
+
+[Button3]
+Coordinates=782,675,53,51
+
+[edtPhone]
+Coordinates=420,290,61,51
+
+[ListBoxItem7]
+Coordinates=453,811,79,33
+
+[ToolBar4]
+Coordinates=95,752,58,33
+
+[Button7]
+Coordinates=86,675,53,51
+
+[ListBoxGroupHeader3]
+Coordinates=195,811,123,33
+
+[TakePhotoFromLibraryAction1]
+Coordinates=733,166,165,33
+
+[edtName]
+Coordinates=180,190,57,51
+
+[ListBox2]
+Coordinates=568,10,116,177
+
+[ListBoxGroupHeader4]
+Coordinates=1051,675,123,33
+
+[ListBoxItem9]
+Coordinates=1037,752,79,33
+
+[dmData.FDQuery1]
+Coordinates=160,111,104,33
+Visible=False
+
+[edtTitle]
+Coordinates=50,240,50,51
+
+[Image2]
+Coordinates=400,170,49,51
+
+[Label4]
+Coordinates=401,675,46,51
+
+[Button4]
+Coordinates=624,675,53,51
+
+[Button8]
+Coordinates=703,675,53,51
+
+[OpenDialog1]
+Coordinates=829,276,77,33
+
+[Button6]
+Coordinates=545,675,53,51
+
+[ListBoxItem10]
+Coordinates=578,752,84,33
+
+[ListBoxItem6]
+Coordinates=473,752,79,33
+
+[edtSite]
+Coordinates=20,340,48,51
+
+[BindSourceDB1]
+Coordinates=200,50,92,339
+
+[BindingsList1]
+Coordinates=150,1,82,33
 
