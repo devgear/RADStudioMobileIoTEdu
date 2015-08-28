@@ -357,39 +357,13 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\resource\EMPLOYEE.db" Configuration="Debug" Class="File">
-                    <Platform Name="iOSSimulator">
-                        <RemoteName>EMPLOYEE.db</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="Android">
-                        <RemoteDir>assets\internal</RemoteDir>
-                        <RemoteName>EMPLOYEE.db</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="Win32">
-                        <RemoteName>EMPLOYEE.db</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="iOSDevice64">
-                        <RemoteName>EMPLOYEE.db</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="Win64">
-                        <RemoteName>EMPLOYEE.db</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="OSX32">
-                        <RemoteName>EMPLOYEE.db</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
+                <DeployFile LocalName="iOSDevice32\Debug\EmployeeDS03" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="iOSDevice32">
-                        <RemoteDir>StartUp\Documents</RemoteDir>
-                        <RemoteName>EMPLOYEE.db</RemoteName>
+                        <RemoteName>EmployeeDS03.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="iOSDevice32\Debug\Employee03.info.plist" Configuration="Debug" Class="ProjectiOSInfoPList">
+                <DeployFile LocalName="iOSDevice32\Debug\EmployeeDS03.info.plist" Configuration="Debug" Class="ProjectiOSInfoPList">
                     <Platform Name="iOSDevice32">
                         <RemoteName>Info.plist</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -413,12 +387,6 @@
                 </DeployFile>
                 <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
                     <Platform Name="iOSSimulator">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="iOSDevice32\Debug\EmployeeDS03" Configuration="Debug" Class="ProjectOutput">
-                    <Platform Name="iOSDevice32">
-                        <RemoteName>EmployeeDS03</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -619,9 +587,9 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="iOSDevice32\Debug\Employee03.dSYM" Configuration="Debug" Class="ProjectiOSDeviceDebug">
+                <DeployFile LocalName="iOSDevice32\Debug\EmployeeDS03.dSYM" Configuration="Debug" Class="ProjectiOSDeviceDebug">
                     <Platform Name="iOSDevice32">
-                        <RemoteName>Employee03</RemoteName>
+                        <RemoteName>EmployeeDS03</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -631,7 +599,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="iOSDevice32\Debug\Employee03.entitlements" Configuration="Debug" Class="ProjectiOSEntitlements">
+                <DeployFile LocalName="iOSDevice32\Debug\EmployeeDS03.entitlements" Configuration="Debug" Class="ProjectiOSEntitlements">
                     <Platform Name="iOSDevice32">
                         <Overwrite>true</Overwrite>
                     </Platform>
@@ -1068,7 +1036,7 @@
                 <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
             </Deployment>
             <Platforms>
-                <Platform value="Android">True</Platform>
+                <Platform value="Android" ActiveMobileDevice="42f76f14bd3eaf8f">True</Platform>
                 <Platform value="iOSDevice32">True</Platform>
                 <Platform value="iOSDevice64">True</Platform>
                 <Platform value="iOSSimulator" ActiveMobileDevice="iPad">True</Platform>

@@ -11,7 +11,7 @@ uses
   Data.Bind.Components, Data.Bind.ObjectScope, FMX.ListView,
   FMX.Controls.Presentation, FMX.TabControl, System.Actions, FMX.ActnList,
   FMX.WebBrowser, FMX.MediaLibrary.Actions, FMX.StdActns, FMX.Edit,
-  Data.Bind.DBScope;
+  Data.Bind.DBScope, FMX.Effects;
 
 type
   TForm1 = class(TForm)
@@ -70,6 +70,15 @@ type
     Image2: TImage;
     Button7: TButton;
     Button8: TButton;
+    TabItem5: TTabItem;
+    Layout1: TLayout;
+    Rectangle2: TRectangle;
+    Rectangle3: TRectangle;
+    ShadowEffect1: TShadowEffect;
+    Text1: TText;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Button9: TButton;
     BindSourceDB1: TBindSourceDB;
     BindingsList1: TBindingsList;
     LinkListControlToField1: TLinkListControlToField;
@@ -98,6 +107,7 @@ type
     procedure Button8Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure Button9Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -128,7 +138,7 @@ end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 begin
-  dmData.FDQuery1.Cancel;
+  dmData.ClientDataSet1.Cancel;
 
   ChangeTabAction1.Tab := TabItem1;
   ChangeTabAction1.ExecuteTarget(nil);
@@ -148,16 +158,17 @@ begin
     Thumbnail := ImageBitmap.CreateThumbnail(100, 100);
     Thumbnail.SaveToStream(ThumbStream);
 
-    (dmData.FDQuery1.FieldByName('IMAGE') as TBlobField)
+    (dmData.ClientDataSet1.FieldByName('IMAGE') as TBlobField)
         .LoadFromStream(ImgStream);
-    (dmData.FDQuery1.FieldByName('THUMB') as TBlobField)
+    (dmData.ClientDataSet1.FieldByName('THUMB') as TBlobField)
         .LoadFromStream(ThumbStream);
   finally
     ImgStream.Free;
     ThumbStream.Free;
   end;
 
-  dmData.FDQuery1.Post;
+  dmData.ClientDataSet1.Post;
+  dmData.ClientDataSet1.ApplyUpdates(-1);
 
   ChangeTabAction1.Tab := TabItem2;
   ChangeTabAction1.ExecuteTarget(nil);
@@ -165,7 +176,7 @@ end;
 
 procedure TForm1.Button7Click(Sender: TObject);
 begin
-  dmData.FDQuery1.Append;
+  dmData.ClientDataSet1.Append;
 
   ChangeTabAction1.Tab := TabItem4;
   ChangeTabAction1.ExecuteTarget(nil);
@@ -173,10 +184,21 @@ end;
 
 procedure TForm1.Button8Click(Sender: TObject);
 begin
-  dmData.FDQuery1.Edit;
+  dmData.ClientDataSet1.Edit;
 
 
   ChangeTabAction1.Tab := TabItem4;
+  ChangeTabAction1.ExecuteTarget(nil);
+end;
+
+procedure TForm1.Button9Click(Sender: TObject);
+begin
+  dmData.SQLConnection1.Params.Values['HostName'] := Edit1.Text;
+  dmData.SQLConnection1.Params.Values['Port'] := Edit2.Text;
+  dmData.SQLConnection1.Connected := True;
+  dmData.ClientDataSet1.Active := True;
+
+  ChangeTabAction1.Tab := TabItem1;
   ChangeTabAction1.ExecuteTarget(nil);
 end;
 

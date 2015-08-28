@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   Caption = 'Form1'
   ClientHeight = 480
-  ClientWidth = 366
+  ClientWidth = 334
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
@@ -12,31 +12,112 @@ object Form1: TForm1
   object TabControl1: TTabControl
     Align = Client
     FullSize = True
-    Size.Width = 366.000000000000000000
+    Size.Width = 334.000000000000000000
     Size.Height = 480.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
-    TabIndex = 3
+    TabIndex = 0
     TabOrder = 0
     TabPosition = PlatformDefault
+    object TabItem5: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 67.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = #50672#44208
+      object Layout1: TLayout
+        Align = Center
+        Size.Width = 233.000000000000000000
+        Size.Height = 217.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Rectangle2: TRectangle
+          Align = Top
+          Fill.Color = claBlack
+          Size.Width = 233.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          object Text1: TText
+            Align = Client
+            Size.Width = 233.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Text = #49436#48260' '#50672#44208
+            TextSettings.Font.Size = 20.000000000000000000
+            TextSettings.Font.Style = [fsBold]
+            TextSettings.FontColor = claWhite
+          end
+        end
+        object Rectangle3: TRectangle
+          Align = Client
+          Fill.Color = claWhite
+          Size.Width = 233.000000000000000000
+          Size.Height = 167.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+        object ShadowEffect1: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.600000023841857900
+          ShadowColor = claBlack
+        end
+        object Edit1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 2
+          Text = '192.168.0.73'
+          Position.X = 24.000000000000000000
+          Position.Y = 74.000000000000000000
+          Size.Width = 185.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = #54840#49828#53944
+        end
+        object Edit2: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 3
+          KeyboardType = NumberPad
+          Text = '211'
+          Position.X = 24.000000000000000000
+          Position.Y = 114.000000000000000000
+          Size.Width = 185.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = #54252#53944
+        end
+        object Button9: TButton
+          Position.X = 80.000000000000000000
+          Position.Y = 160.000000000000000000
+          TabOrder = 4
+          Text = #50672#44208
+          OnClick = Button9Click
+        end
+      end
+    end
     object TabItem1: TTabItem
       CustomIcon = <
         item
         end>
       IsSelected = False
-      Size.Width = 92.000000000000000000
+      Size.Width = 67.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
       Text = #49324#50896#47785#47197
       object ToolBar1: TToolBar
-        Size.Width = 366.000000000000000000
+        Size.Width = 334.000000000000000000
         Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object Label1: TLabel
           Align = Contents
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           TextSettings.HorzAlign = Center
@@ -44,7 +125,7 @@ object Form1: TForm1
         end
         object Button7: TButton
           Align = Right
-          Position.X = 318.000000000000000000
+          Position.X = 286.000000000000000000
           Size.Width = 48.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
@@ -61,7 +142,7 @@ object Form1: TForm1
         FooterAppearanceClassName = 'TListHeaderObjects'
         ItemIndex = 0
         Align = Client
-        Size.Width = 366.000000000000000000
+        Size.Width = 334.000000000000000000
         Size.Height = 383.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
@@ -76,19 +157,19 @@ object Form1: TForm1
         item
         end>
       IsSelected = False
-      Size.Width = 92.000000000000000000
+      Size.Width = 67.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
       Text = #49345#49464#48372#44592
       object ToolBar2: TToolBar
-        Size.Width = 366.000000000000000000
+        Size.Width = 334.000000000000000000
         Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object Label2: TLabel
           Align = Contents
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           TextSettings.HorzAlign = Center
@@ -106,7 +187,7 @@ object Form1: TForm1
         end
         object Button8: TButton
           Align = Right
-          Position.X = 318.000000000000000000
+          Position.X = 286.000000000000000000
           Size.Width = 48.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
@@ -118,7 +199,7 @@ object Form1: TForm1
       end
       object ListBox1: TListBox
         Align = Client
-        Size.Width = 366.000000000000000000
+        Size.Width = 334.000000000000000000
         Size.Height = 383.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
@@ -126,10 +207,10 @@ object Form1: TForm1
         DefaultItemStyles.ItemStyle = ''
         DefaultItemStyles.GroupHeaderStyle = ''
         DefaultItemStyles.GroupFooterStyle = ''
-        Viewport.Width = 366.000000000000000000
+        Viewport.Width = 334.000000000000000000
         Viewport.Height = 383.000000000000000000
         object ListBoxItem1: TListBoxItem
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 129.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
@@ -24565,7 +24646,7 @@ object Form1: TForm1
         end
         object ListBoxGroupHeader1: TListBoxGroupHeader
           Position.Y = 129.000000000000000000
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -24573,7 +24654,7 @@ object Form1: TForm1
         end
         object ListBoxItem2: TListBoxItem
           Position.Y = 159.000000000000000000
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 2
@@ -24582,7 +24663,7 @@ object Form1: TForm1
             Align = Right
             Anchors = [akLeft, akTop, akRight, akBottom]
             Position.X = 66.000000000000000000
-            Size.Width = 300.000000000000000000
+            Size.Width = 268.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             Text = #44608#54788#49688
@@ -24590,7 +24671,7 @@ object Form1: TForm1
         end
         object ListBoxItem3: TListBoxItem
           Position.Y = 199.000000000000000000
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 3
@@ -24599,7 +24680,7 @@ object Form1: TForm1
             Align = Right
             Anchors = [akLeft, akTop, akRight, akBottom]
             Position.X = 66.000000000000000000
-            Size.Width = 300.000000000000000000
+            Size.Width = 268.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             Text = #44284#51109
@@ -24607,7 +24688,7 @@ object Form1: TForm1
         end
         object ListBoxGroupHeader2: TListBoxGroupHeader
           Position.Y = 239.000000000000000000
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 4
@@ -24615,7 +24696,7 @@ object Form1: TForm1
         end
         object ListBoxItem4: TListBoxItem
           Position.Y = 269.000000000000000000
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 5
@@ -24625,7 +24706,7 @@ object Form1: TForm1
             Align = Right
             Anchors = [akLeft, akTop, akRight, akBottom]
             Position.X = 80.000000000000000000
-            Size.Width = 286.000000000000000000
+            Size.Width = 254.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             Text = '010-4242-9996'
@@ -24633,7 +24714,7 @@ object Form1: TForm1
         end
         object ListBoxItem5: TListBoxItem
           Position.Y = 309.000000000000000000
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 6
@@ -24643,7 +24724,7 @@ object Form1: TForm1
             Align = Right
             Anchors = [akLeft, akTop, akRight, akBottom]
             Position.X = 80.000000000000000000
-            Size.Width = 286.000000000000000000
+            Size.Width = 254.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
             Text = 'http://blog.hjf.pe.kr/'
@@ -24656,19 +24737,19 @@ object Form1: TForm1
         item
         end>
       IsSelected = False
-      Size.Width = 92.000000000000000000
+      Size.Width = 67.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
       Text = #50937#49324#51060#53944
       object ToolBar3: TToolBar
-        Size.Width = 366.000000000000000000
+        Size.Width = 334.000000000000000000
         Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object Label3: TLabel
           Align = Client
-          Size.Width = 318.000000000000000000
+          Size.Width = 286.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           Text = 'Label3'
@@ -24686,7 +24767,7 @@ object Form1: TForm1
       end
       object WebBrowser1: TWebBrowser
         Align = Client
-        Size.Width = 366.000000000000000000
+        Size.Width = 334.000000000000000000
         Size.Height = 383.000000000000000000
         Size.PlatformDefault = False
       end
@@ -24695,20 +24776,20 @@ object Form1: TForm1
       CustomIcon = <
         item
         end>
-      IsSelected = True
-      Size.Width = 90.000000000000000000
+      IsSelected = False
+      Size.Width = 66.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
       Text = #52628#44032'/'#49688#51221
       object ToolBar4: TToolBar
-        Size.Width = 366.000000000000000000
+        Size.Width = 334.000000000000000000
         Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object Label4: TLabel
           Align = Contents
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           TextSettings.HorzAlign = Center
@@ -24726,7 +24807,7 @@ object Form1: TForm1
         end
         object Button4: TButton
           Align = Right
-          Position.X = 318.000000000000000000
+          Position.X = 286.000000000000000000
           Size.Width = 48.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
@@ -24738,7 +24819,7 @@ object Form1: TForm1
       end
       object ListBox2: TListBox
         Align = Client
-        Size.Width = 366.000000000000000000
+        Size.Width = 334.000000000000000000
         Size.Height = 383.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
@@ -24746,10 +24827,10 @@ object Form1: TForm1
         DefaultItemStyles.ItemStyle = ''
         DefaultItemStyles.GroupHeaderStyle = ''
         DefaultItemStyles.GroupFooterStyle = ''
-        Viewport.Width = 366.000000000000000000
+        Viewport.Width = 334.000000000000000000
         Viewport.Height = 383.000000000000000000
         object ListBoxItem6: TListBoxItem
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 129.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
@@ -49221,7 +49302,7 @@ object Form1: TForm1
         end
         object ListBoxGroupHeader3: TListBoxGroupHeader
           Position.Y = 129.000000000000000000
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -49229,7 +49310,7 @@ object Form1: TForm1
         end
         object ListBoxItem7: TListBoxItem
           Position.Y = 159.000000000000000000
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 2
@@ -49242,7 +49323,7 @@ object Form1: TForm1
             Text = #44608#54788#49688
             Position.X = 72.000000000000000000
             Position.Y = 4.000000000000000000
-            Size.Width = 294.000000000000000000
+            Size.Width = 262.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = #51060#47492#51012' '#51077#47141#54616#49464#50836'.'
@@ -49250,7 +49331,7 @@ object Form1: TForm1
         end
         object ListBoxItem8: TListBoxItem
           Position.Y = 199.000000000000000000
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 3
@@ -49263,14 +49344,14 @@ object Form1: TForm1
             Text = #44284#51109
             Position.X = 72.000000000000000000
             Position.Y = 4.000000000000000000
-            Size.Width = 294.000000000000000000
+            Size.Width = 262.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
           end
         end
         object ListBoxGroupHeader4: TListBoxGroupHeader
           Position.Y = 239.000000000000000000
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 4
@@ -49278,7 +49359,7 @@ object Form1: TForm1
         end
         object ListBoxItem9: TListBoxItem
           Position.Y = 269.000000000000000000
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 5
@@ -49293,14 +49374,14 @@ object Form1: TForm1
             Text = '010-4242-9996'
             Position.X = 72.000000000000000000
             Position.Y = 4.000000000000000000
-            Size.Width = 294.000000000000000000
+            Size.Width = 262.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
           end
         end
         object ListBoxItem10: TListBoxItem
           Position.Y = 309.000000000000000000
-          Size.Width = 366.000000000000000000
+          Size.Width = 334.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 6
@@ -49315,7 +49396,7 @@ object Form1: TForm1
             Text = 'http://blog.hjf.pe.kr/'
             Position.X = 72.000000000000000000
             Position.Y = 4.000000000000000000
-            Size.Width = 294.000000000000000000
+            Size.Width = 262.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
           end
@@ -49324,12 +49405,12 @@ object Form1: TForm1
     end
   end
   object OpenDialog1: TOpenDialog
-    Left = 200
-    Top = 160
+    Left = 224
+    Top = 96
   end
   object ActionList1: TActionList
-    Left = 104
-    Top = 224
+    Left = 304
+    Top = 296
     object ChangeTabAction1: TChangeTabAction
       Category = 'Tab'
     end
@@ -49343,16 +49424,16 @@ object Form1: TForm1
     end
   end
   object BindSourceDB1: TBindSourceDB
-    DataSet = dmData.FDQuery1
+    DataSet = dmData.ClientDataSet1
     ScopeMappings = <>
-    Left = 168
-    Top = 224
+    Left = 136
+    Top = 96
   end
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 300
-    Top = 149
+    Left = 20
+    Top = 77
     object LinkListControlToField1: TLinkListControlToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB1
@@ -49394,22 +49475,22 @@ object Form1: TForm1
     object LinkPropertyToFieldText3: TLinkPropertyToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB1
-      FieldName = 'PHONE'
-      Component = lblPhone
+      FieldName = 'NAME'
+      Component = Label2
       ComponentProperty = 'Text'
     end
     object LinkPropertyToFieldText4: TLinkPropertyToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB1
-      FieldName = 'SITE'
-      Component = lblSite
+      FieldName = 'PHONE'
+      Component = lblPhone
       ComponentProperty = 'Text'
     end
     object LinkPropertyToFieldText5: TLinkPropertyToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB1
-      FieldName = 'NAME'
-      Component = Label2
+      FieldName = 'SITE'
+      Component = lblSite
       ComponentProperty = 'Text'
     end
     object LinkPropertyToFieldBitmap2: TLinkPropertyToField
