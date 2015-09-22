@@ -1,0 +1,105 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 368
+  ClientWidth = 370
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 370.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object Label1: TLabel
+      Align = Contents
+      Size.Width = 370.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = #49828#47560#53944' '#51312#47749' '#51228#50612
+    end
+    object Button1: TButton
+      Align = Left
+      Size.Width = 80.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = #46321#47197
+      OnClick = Button1Click
+    end
+    object Switch1: TSwitch
+      Align = Right
+      IsChecked = False
+      Position.X = 326.000000000000000000
+      Position.Y = 11.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      OnSwitch = Switch1Switch
+    end
+  end
+  object RESTClient1: TRESTClient
+    Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
+    AcceptCharset = 'UTF-8, *;q=0.8'
+    BaseURL = 'http://192.168.1.4'
+    ContentType = 'application/json'
+    Params = <>
+    HandleRedirects = True
+    RaiseExceptionOn500 = False
+    Left = 144
+    Top = 40
+  end
+  object RESTRequest1: TRESTRequest
+    Client = RESTClient1
+    Method = rmPOST
+    Params = <
+      item
+        Kind = pkREQUESTBODY
+        name = 'body'
+        Options = [poDoNotEncode]
+        Value = 
+          '{"devicetype":"ApplicationName#DeviceName", "username":"humphery' +
+          'kim"}'
+        ContentType = ctAPPLICATION_JSON
+      end>
+    Resource = 'api'
+    Response = RESTResponse1
+    SynchronizedEvents = False
+    Left = 144
+    Top = 112
+  end
+  object RESTResponse1: TRESTResponse
+    Left = 248
+    Top = 112
+  end
+  object RESTRequest2: TRESTRequest
+    Client = RESTClient1
+    Method = rmPUT
+    Params = <
+      item
+        Kind = pkURLSEGMENT
+        name = 'username'
+        Value = 'humpherykim'
+      end
+      item
+        Kind = pkREQUESTBODY
+        name = 'body'
+        Options = [poDoNotEncode]
+        ContentType = ctAPPLICATION_JSON
+      end>
+    Resource = 'api/{username}/lights/1/state'
+    Response = RESTResponse2
+    SynchronizedEvents = False
+    Left = 144
+    Top = 184
+  end
+  object RESTResponse2: TRESTResponse
+    ContentType = 'application/json'
+    Left = 248
+    Top = 184
+  end
+end

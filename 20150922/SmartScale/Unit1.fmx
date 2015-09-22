@@ -1,0 +1,77 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 376
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 376.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      Align = Contents
+      Size.Width = 376.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = #49828#47560#53944' '#52404#51473#44228' '#45936#47784
+    end
+    object Switch1: TSwitch
+      Align = Right
+      IsChecked = False
+      Position.X = 332.000000000000000000
+      Position.Y = 11.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnSwitch = Switch1Switch
+    end
+  end
+  object Layout1: TLayout
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 376.000000000000000000
+    Size.Height = 81.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Text1: TText
+      Align = Center
+      Size.Width = 114.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Text = '123.12'
+      TextSettings.Font.Size = 30.000000000000000000
+      TextSettings.HorzAlign = Trailing
+      object Text2: TText
+        Position.X = 120.000000000000000000
+        Text = 'Kg'
+        TextSettings.HorzAlign = Leading
+      end
+    end
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 376.000000000000000000
+    Size.Height = 351.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 368.000000000000000000
+    Viewport.Height = 343.000000000000000000
+  end
+  object BluetoothLE1: TBluetoothLE
+    Enabled = False
+    OnCharacteristicRead = BluetoothLE1CharacteristicRead
+    OnEndDiscoverDevices = BluetoothLE1EndDiscoverDevices
+    OnEndDiscoverServices = BluetoothLE1EndDiscoverServices
+    Left = 312
+    Top = 96
+  end
+end
