@@ -11,7 +11,7 @@ uses
   FMX.Layouts, FMX.StdCtrls, Data.Bind.ObjectScope, FMX.ListView,
   FMX.Controls.Presentation, FMX.TabControl, System.Actions, FMX.ActnList,
   FMX.Edit, FMX.WebBrowser, FMX.MediaLibrary.Actions, FMX.StdActns,
-  Data.Bind.DBScope;
+  Data.Bind.DBScope, FMX.ListView.Appearances, FMX.ListView.Adapters.Base;
 
 type
   TForm1 = class(TForm)

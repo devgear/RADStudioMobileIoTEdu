@@ -3,23 +3,23 @@ object Form1: TForm1
   Top = 0
   Caption = 'Form1'
   ClientHeight = 480
-  ClientWidth = 356
+  ClientWidth = 410
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 3
   object ToolBar1: TToolBar
-    Size.Width = 356.000000000000000000
+    Size.Width = 410.000000000000000000
     Size.Height = 48.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object Label1: TLabel
       Align = Contents
-      Size.Width = 356.000000000000000000
+      Size.Width = 410.000000000000000000
       Size.Height = 48.000000000000000000
       Size.PlatformDefault = False
       TextSettings.HorzAlign = Center
-      Text = #49828#47560#53944' '#51312#47749
+      Text = #49828#47560#53944' '#51312#47749' '#51228#50612
     end
     object Button1: TButton
       Align = Left
@@ -33,11 +33,8 @@ object Form1: TForm1
     object Switch1: TSwitch
       Align = Right
       IsChecked = False
-      Position.X = 312.000000000000000000
+      Position.X = 366.000000000000000000
       Position.Y = 11.000000000000000000
-      Size.Width = 44.000000000000000000
-      Size.Height = 26.000000000000000000
-      Size.PlatformDefault = False
       TabOrder = 2
       OnSwitch = Switch1Switch
     end
@@ -46,11 +43,11 @@ object Form1: TForm1
     Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
     DataDetectorTypes = []
     Align = Client
-    Size.Width = 356.000000000000000000
+    Size.Width = 410.000000000000000000
     Size.Height = 432.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 1
-    Viewport.Width = 348.000000000000000000
+    TabOrder = 4
+    Viewport.Width = 402.000000000000000000
     Viewport.Height = 424.000000000000000000
   end
   object RESTClient1: TRESTClient
@@ -61,8 +58,8 @@ object Form1: TForm1
     Params = <>
     HandleRedirects = True
     RaiseExceptionOn500 = False
-    Left = 192
-    Top = 80
+    Left = 32
+    Top = 112
   end
   object RESTRequest1: TRESTRequest
     Client = RESTClient1
@@ -80,18 +77,18 @@ object Form1: TForm1
     Resource = 'api'
     Response = RESTResponse1
     SynchronizedEvents = False
-    Left = 192
-    Top = 136
+    Left = 32
+    Top = 184
   end
   object RESTResponse1: TRESTResponse
-    Left = 272
-    Top = 136
+    Left = 144
+    Top = 184
   end
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 52
-    Top = 261
+    Left = 140
+    Top = 61
     object LinkControlToField1: TLinkControlToField
       Category = 'Quick Bindings'
       DataSource = RESTResponse1
@@ -118,12 +115,12 @@ object Form1: TForm1
     Resource = 'api/{username}/lights/1/state'
     Response = RESTResponse2
     SynchronizedEvents = False
-    Left = 184
-    Top = 208
+    Left = 40
+    Top = 272
   end
   object RESTResponse2: TRESTResponse
     ContentType = 'application/json'
-    Left = 272
-    Top = 216
+    Left = 144
+    Top = 272
   end
 end

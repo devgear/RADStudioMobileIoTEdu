@@ -9,6 +9,9 @@
         <Projects Include="Server\EmpServer.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="Test\Project1.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -35,14 +38,23 @@
     <Target Name="EmpServer:Make">
         <MSBuild Projects="Server\EmpServer.dproj" Targets="Make"/>
     </Target>
+    <Target Name="Project1">
+        <MSBuild Projects="Test\Project1.dproj"/>
+    </Target>
+    <Target Name="Project1:Clean">
+        <MSBuild Projects="Test\Project1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project1:Make">
+        <MSBuild Projects="Test\Project1.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="EmployeeDS03;EmpServer"/>
+        <CallTarget Targets="EmployeeDS03;EmpServer;Project1"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="EmployeeDS03:Clean;EmpServer:Clean"/>
+        <CallTarget Targets="EmployeeDS03:Clean;EmpServer:Clean;Project1:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="EmployeeDS03:Make;EmpServer:Make"/>
+        <CallTarget Targets="EmployeeDS03:Make;EmpServer:Make;Project1:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
